@@ -1,5 +1,6 @@
 local modName = "No Zako on Map"
 local folderName = modName
+local version = "Version: 1.0.3"
 
 local modUtils = require(folderName .. "/modUtils")
 
