@@ -1,6 +1,6 @@
 local modName = "No Zako on Map"
 local folderName = modName
-local version = "Version: 1.0.3"
+local version = "Version: 1.0.4"
 
 local modUtils = require(folderName .. "/modUtils")
 
@@ -10,7 +10,7 @@ local settings = modUtils.getConfigHandler({
 
 log.info(modName .. " loaded!")
 
-sdk.hook(sdk.find_type_definition("snow.QuestManager"):get_method("setupEnemyZakoSetData"), function(args)
+sdk.hook(sdk.find_type_definition("snow.enemy.EnemyManager"):get_method("setupEnemyZakoSetData"), function(args)
   if settings.data.enabledNoZako then
     return sdk.PreHookResult.SKIP_ORIGINAL
   else
